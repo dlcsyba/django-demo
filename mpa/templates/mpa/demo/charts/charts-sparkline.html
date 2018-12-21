@@ -1,0 +1,103 @@
+{% extends 'mpa/common/base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="page-title">Sparkline Charts </h4>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Line Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="sparkline1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Bar Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="sparkline2" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Pie Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="sparkline3" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Row -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Custom Line Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="sparkline4" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Mouse Speed Chart Example</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="sparkline5" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Composite bar Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="sparkline6" class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Row -->
+
+
+            </div>
+            <!-- end container -->
+
+        </div>
+        <!-- end wrapper -->
+
+{% endblock %}
+
+{% block static %}
+        <script src="{% static 'mpa/plugins/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+        <script src="{% static 'mpa/pages/jquery.charts-sparkline.js' %}"></script>
+{% endblock %}

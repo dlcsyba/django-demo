@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="shortcut icon" href="{% static 'mpa/images/favicon_1.ico' %}">
+
+    <title>{% block title %}Moltran - Responsive Admin Dashboard Template{% endblock %}</title>
+
+    <link href="{% static 'mpa/plugins/sweetalert/dist/sweetalert.css' %}" rel="stylesheet" type="text/css">
+
+    <link href="{% static 'mpa/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'mpa/css/core.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'mpa/css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'mpa/css/components.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'mpa/css/pages.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'mpa/css/menu.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'mpa/css/responsive.css' %}" rel="stylesheet" type="text/css">
+
+    <script src="{% static 'mpa/js/modernizr.min.js' %}"></script>
+
+    <!-- HTML5 Shim and Respond.js ' %} IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js ' %} doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js ' %}"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js ' %}/1.3.0/respond.min.js ' %}"></script>
+    <![endif]-->
+</head>
+<body>
+    {% include 'mpa/common/nav.html' %}
+
+    {% block content %}
+        <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
+    {% endblock %}
+
+    {% include 'mpa/common/bottom.html' %}
+
+    <!-- jQuery  -->
+    <script src="{% static 'mpa/js/jquery.min.js' %}"></script>
+    <script src="{% static 'mpa/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'mpa/js/detect.js' %}"></script>
+    <script src="{% static 'mpa/js/fastclick.js' %}"></script>
+    <script src="{% static 'mpa/js/jquery.blockUI.js' %}"></script>
+    <script src="{% static 'mpa/js/waves.js' %}"></script>
+    <script src="{% static 'mpa/js/wow.min.js' %}"></script>
+    <script src="{% static 'mpa/js/jquery.nicescroll.js' %}"></script>
+    <script src="{% static 'mpa/js/jquery.scrollTo.min.js' %}"></script>
+
+    <script src="{% static 'mpa/js/RestAPIHelper.js' %}"></script>
+
+    <!-- App js -->
+    <script src="{% static 'mpa/js/jquery.app.js' %}"></script>
+
+    {% block static %}
+
+    {% endblock %}
+</body>
+</html>

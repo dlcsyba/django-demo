@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .navbar-nav>li>a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar-->
+    <header id="topnav">
+{#        <div class="topbar-main">#}
+{#            <div class="container">#}
+{##}
+{#                <!-- LOGO -->#}
+{#                <div class="topbar-left">#}
+{#                    <a href="/mpa/home" class="logo"><i class="md md-terrain"></i> <span>Moltran </span></a>#}
+{#                </div>#}
+{#                <!-- End Logo container-->#}
+{##}
+{##}
+{#                <div class="menu-extras">#}
+{##}
+{#                    <ul class="nav navbar-nav navbar-right pull-right">#}
+{#                        <li>#}
+{#                            <form role="search" class="navbar-left app-search pull-left hidden-xs">#}
+{#                                 <input type="text" placeholder="Search..." class="form-control">#}
+{#                                 <a href=""><i class="fa fa-search"></i></a>#}
+{#                            </form>#}
+{#                        </li>#}
+{#                        <li class="dropdown hidden-xs">#}
+{#                            <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">#}
+{#                                <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>#}
+{#                            </a>#}
+{#                            <ul class="dropdown-menu dropdown-menu-lg">#}
+{#                                <li class="text-center notifi-title">Notification</li>#}
+{#                                <li class="list-group">#}
+{#                                   <!-- list item-->#}
+{#                                   <a href="javascript:void(0);" class="list-group-item">#}
+{#                                      <div class="media">#}
+{#                                         <div class="pull-left">#}
+{#                                            <em class="fa fa-user-plus fa-2x text-info"></em>#}
+{#                                         </div>#}
+{#                                         <div class="media-body clearfix">#}
+{#                                            <div class="media-heading">New user registered</div>#}
+{#                                            <p class="m-0">#}
+{#                                               <small>You have 10 unread messages</small>#}
+{#                                            </p>#}
+{#                                         </div>#}
+{#                                      </div>#}
+{#                                   </a>#}
+{#                                   <!-- list item-->#}
+{#                                    <a href="javascript:void(0);" class="list-group-item">#}
+{#                                      <div class="media">#}
+{#                                         <div class="pull-left">#}
+{#                                            <em class="fa fa-diamond fa-2x text-primary"></em>#}
+{#                                         </div>#}
+{#                                         <div class="media-body clearfix">#}
+{#                                            <div class="media-heading">New settings</div>#}
+{#                                            <p class="m-0">#}
+{#                                               <small>There are new settings available</small>#}
+{#                                            </p>#}
+{#                                         </div>#}
+{#                                      </div>#}
+{#                                    </a>#}
+{#                                    <!-- list item-->#}
+{#                                    <a href="javascript:void(0);" class="list-group-item">#}
+{#                                      <div class="media">#}
+{#                                         <div class="pull-left">#}
+{#                                            <em class="fa fa-bell-o fa-2x text-danger"></em>#}
+{#                                         </div>#}
+{#                                         <div class="media-body clearfix">#}
+{#                                            <div class="media-heading">Updates</div>#}
+{#                                            <p class="m-0">#}
+{#                                               <small>There are#}
+{#                                                  <span class="text-primary">2</span> new updates available</small>#}
+{#                                            </p>#}
+{#                                         </div>#}
+{#                                      </div>#}
+{#                                    </a>#}
+{#                                   <!-- last list item -->#}
+{#                                    <a href="javascript:void(0);" class="list-group-item">#}
+{#                                      <small>See all notifications</small>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </li>#}
+{##}
+{#                        <li class="dropdown user-box">#}
+{#                            <a href="" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">#}
+{#                                <img src="../../static/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">#}
+{#                                <div class="user-status away"><i class="zmdi zmdi-dot-circle"></i></div>#}
+{#                            </a>#}
+{##}
+{#                            <ul class="dropdown-menu">#}
+{#                                <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>#}
+{#                                <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>#}
+{#                                <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>#}
+{#                                <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>#}
+{#                            </ul>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                    <div class="menu-item">#}
+{#                        <!-- Mobile menu toggle-->#}
+{#                        <a class="navbar-toggle">#}
+{#                            <div class="lines">#}
+{#                                <span></span>#}
+{#                                <span></span>#}
+{#                                <span></span>#}
+{#                            </div>#}
+{#                        </a>#}
+{#                        <!-- End mobile menu toggle-->#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+
+        <div class="navbar-custom">
+            <div class="container">
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu">
+                        <li class="active">
+                            <a href="/mpa/home"><i class="md md-home"></i> <span> Dashboard </span> </a>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"><i class="md md-palette "></i><span> Elements </span> </a>
+                            <ul class="submenu">
+                                <li><a href="/mpa/demos/elements/typography">Typography</a></li>
+                                <li><a href="/mpa/demos/elements/buttons">Buttons</a></li>
+                                <li><a href="/mpa/demos/elements/panels">Panels</a></li>
+                                <li><a href="/mpa/demos/elements/checkbox-radio">Checkboxs-Radios</a></li>
+                                <li><a href="/mpa/demos/elements/tabs-accordions">Tabs &amp; Accordions</a></li>
+                                <li><a href="/mpa/demos/elements/modals">Modals</a></li>
+                                <li><a href="/mpa/demos/elements/bootstrap-ui">BS Elements</a></li>
+                                <li><a href="/mpa/demos/elements/progressbars">Progress Bars</a></li>
+                                <li><a href="/mpa/demos/elements/notification">Notification</a></li>
+                                <li><a href="/mpa/demos/elements/sweet-alert">Sweet-Alert</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"><i class="md md-invert-colors-on"></i> <span> Components </span> </a>
+                            <ul class="submenu">
+                                <li><a href="/mpa/demos/components/grid">Grid</a></li>
+                                <li><a href="/mpa/demos/components/portlets">Portlets</a></li>
+                                <li><a href="/mpa/demos/components/widgets">Widgets</a></li>
+                                <li><a href="/mpa/demos/components/nestable-list">Nesteble</a></li>
+                                <li><a href="/mpa/demos/components/ui-sliders">Sliders </a></li>
+                                <li><a href="/mpa/demos/components/gallery">Gallery </a></li>
+                                <li><a href="/mpa/demos/components/pricing">Pricing Table </a></li>
+                                <li><a href="/mpa/demos/components/calendar">Calendar </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"><i class="md md-redeem"></i> <span> Other </span> </a>
+                            <ul class="submenu">
+                                <li class="has-submenu">
+                                    <a href="#">Icons</a>
+                                    <ul class="submenu">
+                                        <li><a href="/mpa/demos/icons/material-icon">Material Design</a></li>
+                                        <li><a href="/mpa/demos/icons/ion-icons">Ion Icons</a></li>
+                                        <li><a href="/mpa/demos/icons/font-awesome">Font awesome</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="#">Forms</a>
+                                    <ul class="submenu">
+                                        <li><a href="/mpa/demos/forms/form-elements">General Elements</a></li>
+                                        <li><a href="/mpa/demos/forms/form-validation">Form Validation</a></li>
+                                        <li><a href="/mpa/demos/forms/form-advanced">Advanced Form</a></li>
+                                        <li><a href="/mpa/demos/forms/form-wizard">Form Wizard</a></li>
+                                        <li><a href="/mpa/demos/forms/form-editor">WYSIWYG Editor</a></li>
+                                        <li><a href="/mpa/demos/forms/code-editor">Code Editors</a></li>
+                                        <li><a href="/mpa/demos/forms/form-uploads">Multiple File Upload</a></li>
+                                        <li><a href="/mpa/demos/forms/form-xeditable">X-editable</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="#">Tables</a>
+                                    <ul class="submenu">
+                                        <li><a href="/mpa/demos/tables/tables">Basic Tables</a></li>
+                                        <li><a href="/mpa/demos/tables/table-datatable">Data Table</a></li>
+                                        <li><a href="/mpa/demos/tables/tables-editable">Editable Table</a></li>
+                                        <li><a href="/mpa/demos/tables/responsive-table">Responsive Table</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="#">Charts</a>
+                                    <ul class="submenu">
+                                        <li><a href="/mpa/demos/charts/morris-chart">Morris Chart</a></li>
+                                        <li><a href="/mpa/demos/charts/chartjs">Chartjs</a></li>
+                                        <li><a href="/mpa/demos/charts/flot-chart">Flot Chart</a></li>
+                                        <li><a href="/mpa/demos/charts/peity-chart">Peity Charts</a></li>
+                                        <li><a href="/mpa/demos/charts/charts-sparkline">Sparkline Charts</a></li>
+                                        <li><a href="/mpa/demos/charts/chart-radial">Radial charts</a></li>
+                                        <li><a href="/mpa/demos/charts/other-chart">Other Chart</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="#">Maps</a>
+                                    <ul class="submenu">
+                                        <li><a href="/mpa/demos/maps/gmap"> Google Map</a></li>
+                                        <li><a href="/mpa/demos/maps/vector-map"> Vector Map</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="#">Mail</a>
+                                    <ul class="submenu">
+                                        <li><a href="/mpa/demos/mail/inbox">Inbox</a></li>
+                                        <li><a href="/mpa/demos/mail/email-compose">Compose Mail</a></li>
+                                        <li><a href="/mpa/demos/mail/email-read">View Mail</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"><i class="md md-pages"></i><span>Pages </span> </a>
+                            <ul class="submenu megamenu">
+                                <li>
+                                    <ul>
+                                        <li><a href="/mpa/demos/pages/profile">Profile</a></li>
+                                        <li><a href="/mpa/demos/pages/timeline">Timeline</a></li>
+                                        <li><a href="/mpa/demos/pages/invoice">Invoice</a></li>
+                                        <li><a href="/mpa/demos/pages/email-template">Email template</a></li>
+                                        <li><a href="/mpa/demos/pages/contact">Contact-list</a></li>
+                                        <li><a href="{% url 'mpa:login' %}">Login</a></li>
+                                        <li><a href="/mpa/to_register">Register</a></li>
+                                        <li><a href="/mpa/to_recoverpw">Recover Password</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="/mpa/demos/pages/lock-screen">Lock Screen</a></li>
+                                        <li><a href="/mpa/demos/pages/blank">Blank Page</a></li>
+                                        <li><a href="/mpa/demos/pages/maintenance">Maintenance</a></li>
+                                        <li><a href="/mpa/demos/pages/coming-soon">Coming-soon</a></li>
+                                        <li><a href="/mpa/demos/pages/404">404 Error</a></li>
+                                        <li><a href="/mpa/demos/pages/404_alt">404 alt</a></li>
+                                        <li><a href="/mpa/demos/pages/500">500 Error</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <!-- End navigation menu  -->
+                </div>
+                <div class="menu-extras">
+                    <ul class="nav navbar-nav navbar-right pull-right">
+                        <li>
+                            <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                                 <input type="text" placeholder="Search..." class="form-control">
+                                 <a href=""><i class="fa fa-search"></i></a>
+                            </form>
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
+                                <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg">
+                                <li class="text-center notifi-title">Notification</li>
+                                <li class="list-group">
+                                   <!-- list item-->
+                                   <a href="javascript:void(0);" class="list-group-item">
+                                      <div class="media">
+                                         <div class="pull-left">
+                                            <em class="fa fa-user-plus fa-2x text-info"></em>
+                                         </div>
+                                         <div class="media-body clearfix">
+                                            <div class="media-heading">New user registered</div>
+                                            <p class="m-0">
+                                               <small>You have 10 unread messages</small>
+                                            </p>
+                                         </div>
+                                      </div>
+                                   </a>
+                                   <!-- list item-->
+                                    <a href="javascript:void(0);" class="list-group-item">
+                                      <div class="media">
+                                         <div class="pull-left">
+                                            <em class="fa fa-diamond fa-2x text-primary"></em>
+                                         </div>
+                                         <div class="media-body clearfix">
+                                            <div class="media-heading">New settings</div>
+                                            <p class="m-0">
+                                               <small>There are new settings available</small>
+                                            </p>
+                                         </div>
+                                      </div>
+                                    </a>
+                                    <!-- list item-->
+                                    <a href="javascript:void(0);" class="list-group-item">
+                                      <div class="media">
+                                         <div class="pull-left">
+                                            <em class="fa fa-bell-o fa-2x text-danger"></em>
+                                         </div>
+                                         <div class="media-body clearfix">
+                                            <div class="media-heading">Updates</div>
+                                            <p class="m-0">
+                                               <small>There are
+                                                  <span class="text-primary">2</span> new updates available</small>
+                                            </p>
+                                         </div>
+                                      </div>
+                                    </a>
+                                   <!-- last list item -->
+                                    <a href="javascript:void(0);" class="list-group-item">
+                                      <small>See all notifications</small>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown user-box">
+                            <a href="" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
+                                <img src="{% static 'mpa/images/users/avatar-1.jpg' %}" style="height: 60px" alt="user-img" class="img-circle user-img">
+                                <div class="user-status away"><i class="zmdi zmdi-dot-circle"></i></div>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> 信息</a></li>
+                                <li><a href="javascript:void(0)"><i class="md md-settings"></i> 设置</a></li>
+                                <li><a href="javascript:void(0)"><i class="md md-lock"></i> 锁定</a></li>
+                                <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> 登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Navigation Bar-->
+</body>
+</html>

@@ -1,0 +1,130 @@
+{% extends 'mpa/common/base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="page-title">Other Charts </h4>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Jquery Knob</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <h5>Disable display input</h5>
+                                        <input class="knob" data-width="150" data-fgcolor="#14082d" data-displayinput="false" value="35">
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <h5>Cursor mode</h5>
+                                        <input class="knob" data-width="150" data-cursor="true" data-fgcolor="#33b86c" value="29">
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <h5>Display previous value</h5>
+                                        <input class="knob" data-width="150" data-min="-100" data-fgcolor="#f13c6e" data-displayprevious="true" value="44">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <h5>Angle offset</h5>
+                                        <input class="knob" data-width="150" data-angleoffset="90" data-linecap="round" data-fgcolor="#ebc142" value="35">
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <h5>5-digit values, step 1000</h5>
+                                        <input class="knob" data-width="150" data-min="-15000" data-displayprevious="true" data-max="15000" data-step="1000" value="-11000" data-fgcolor="#615ca8">
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <h5>Angle offset and arc</h5>
+                                        <input class="knob" data-width="150" data-cursor="true" data-fgcolor="#1ca8dd" value="29">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End row -->
+
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Easy Pie Chart</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="chart easy-pie-chart-1" data-percent="86">
+                                            <span class="percent"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="chart easy-pie-chart-2" data-percent="86">
+                                            <span class="percent"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="chart easy-pie-chart-3" data-percent="86">
+                                            <span class="percent"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="chart easy-pie-chart-4" data-percent="56">
+                                            <span class="percent"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End row -->
+
+            </div>
+            <!-- end container -->
+
+        </div>
+        <!-- end wrapper -->
+{% endblock %}
+
+{% block static %}
+        <!-- EASY PIE CHART JS -->
+        <script src="{% static 'mpa/plugins/jquery.easy-pie-chart/dist/easypiechart.min.js' %}"></script>
+        <script src="{% static 'mpa/plugins/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js' %}"></script>
+        <script src="{% static 'mpa/pages/easy-pie-chart.init.js' %}"></script>
+
+        <!-- KNOB JS -->
+        <script src="{% static 'mpa/plugins/jquery-knob/excanvas.js' %}"></script>
+        <script src="{% static 'mpa/plugins/jquery-knob/jquery.knob.js' %}"></script>
+
+        <script>
+			$(function() {
+				$(".knob").knob();
+			});
+		</script>
+{% endblock %}

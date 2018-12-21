@@ -1,0 +1,105 @@
+{% extends 'mpa/common/base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="page-title">Editors </h4>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3 class="panel-title">Summernote Editor</h3></div>
+                            <div class="panel-body">
+                                <div class="summernote">Hello Summernote</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End row -->
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3 class="panel-title">Wysihtml5 Editor</h3></div>
+                            <div class="panel-body">
+                                <textarea class="wysihtml5 form-control" rows="9"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End row -->
+
+
+                <!-- Footer -->
+                <footer class="footer text-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                2016 © Moltran.
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="pull-right list-inline m-b-0">
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+
+            </div>
+            <!-- end container -->
+
+        </div>
+        <!-- end wrapper -->
+{% endblock %}
+
+{% block static %}
+        <script type="text/javascript" src="{% static 'mpa/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js' %}"></script>
+        <script type="text/javascript" src="{% static 'mpa/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js' %}"></script>
+
+        <!--form validation init-->
+        <script src="{% static 'mpa/plugins/summernote/dist/summernote.min.js' %}"></script>
+
+        <script>
+
+            jQuery(document).ready(function(){
+                $('.wysihtml5').wysihtml5();
+
+                $('.summernote').summernote({
+                    height: 200,                 // set editor height
+
+                    minHeight: null,             // set minimum height of editor
+                    maxHeight: null,             // set maximum height of editor
+
+                    focus: true                 // set focus to editable area after initializing summernote
+                });
+
+            });
+        </script>
+{% endblock %}

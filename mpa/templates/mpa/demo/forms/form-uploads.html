@@ -1,0 +1,77 @@
+{% extends 'mpa/common/base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="page-title">Multiple File Upload </h4>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12 portlets">
+                        <!-- Your awesome content goes here -->
+                        <div class="m-b-30">
+                            <form action="#" class="dropzone" id="dropzone">
+                              <div class="fallback">
+                                <input name="file" type="file" multiple="multiple">
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+
+                <!-- Footer -->
+                <footer class="footer text-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                2016 © Moltran.
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="pull-right list-inline m-b-0">
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+
+            </div>
+            <!-- end container -->
+
+        </div>
+        <!-- end wrapper -->
+{% endblock %}
+
+{% block static %}
+
+        <!-- Page Specific JS Libraries -->
+        <script src="{% static 'mpa/plugins/dropzone/dist/dropzone.js' %}"></script>
+{% endblock %}
